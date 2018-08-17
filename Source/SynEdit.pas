@@ -1165,6 +1165,7 @@ type
     property Width;
     // inherited events
     property OnClick;
+    property OnContextPopup;
     property OnDblClick;
     property OnDragDrop;
     property OnDragOver;
