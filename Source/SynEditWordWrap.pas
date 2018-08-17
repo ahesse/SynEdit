@@ -322,8 +322,16 @@ begin
     Result := 0;
     Exit;
   end;
-  Assert(aIndex >= 0);
-  Assert(aCount >= 1);
+
+  // replace Assert's
+  if (aIndex < 0) or (aCount <= 0) then
+  begin
+    Result := 0;
+    Exit;
+  end;
+  
+//  Assert(aIndex >= 0);
+//  Assert(aCount >= 1);
   Assert(aIndex <= LineCount);
   // resize FLineOffsets
   GrowLines(LineCount + aCount);
